@@ -12,7 +12,7 @@ function Filter(props) {
 
     return (
         <>
-            <h2> فیلتر ها</h2>
+            <h2 className={style.filter_h2}> فیلتر ها</h2>
             <div className={style.filter_box}>
                 <div className={style.box} onClick={() => setFilter('invert(1)')}>invert</div>
                 <div className={style.box}  onClick={() => setFilter('sepia(1)')}>sepia</div>

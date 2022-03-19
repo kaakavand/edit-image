@@ -6,8 +6,7 @@ function GetImage(props) {
     const [showImg, setShowImg] = useState(false);
     const [img, setImg] = useState("");
     const [imgFilter, setImgFilter] = useState("");
-    const [brightness, setBrightness] = useState(0);
-
+    const [rotate, setRotate] = useState(0);
 
     const changeImage = (e) => {
         const src = URL.createObjectURL(e.target.files[0]);
@@ -22,12 +21,19 @@ function GetImage(props) {
 
     useEffect(() => {
         setImgFilter(props.filterImg);
+    }, [props.filterImg]);
+
+    useEffect(() => {
         setImgFilter(`brightness(${props.brightness}%)`);
-    }, [props]);
+    }, [props.brightness]);
+
+    useEffect(() => {
+        setRotate(props.rotate);
+    }, [props.rotate]);
 
     return (
         <div>
-            <h2>تصویر کالا</h2>
+            <h2 className={style.imageAdd}>تصویر کالا</h2>
             <div className={style.input_box}>
                 <figure>
                     {showImg ? (
@@ -35,7 +41,7 @@ function GetImage(props) {
                             <img
                                 src={img}
                                 alt=""
-                                style={{ filter: imgFilter }}
+                                style={{ filter: imgFilter , transform: `rotate(${rotate * 1.8}deg)`}}
                             />
                             <span
                                 className={style.remove}
@@ -53,8 +59,8 @@ function GetImage(props) {
                                 type="file"
                                 onChange={changeImage}
                             />
-                            <Button variant="contained" component="span">
-                                Upload
+                            <Button variant="contained" component="span" className={style.button_upload}>
+                                آپلود تصویر
                             </Button>
                         </label>
                     )}
