@@ -32,7 +32,7 @@ function GetImage(props) {
     }, [props.rotate]);
 
     return (
-        <div>
+        <div className={style.main}>
             <h2 className={style.imageAdd}>تصویر کالا</h2>
             <div className={style.input_box}>
                 <figure>
