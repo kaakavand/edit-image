@@ -2,7 +2,13 @@ import { Button, Slider } from "@mui/material";
 import React from "react";
 import style from "../component.module.scss";
 
-function Setting() {
+function Setting(props) {
+
+
+    const changBrightness = (e) => {
+        props.brightness(e.target.value)
+    }
+
     return (
         <div className={style.setting_box}>
             <div>
@@ -10,9 +16,10 @@ function Setting() {
                     روشنایی
                     <Slider
                         size="small"
-                        defaultValue={0}
+                        defaultValue={100}
                         aria-label="Small"
                         valueLabelDisplay="auto"
+                        onChange={changBrightness}
                     />
                 </span>
                 <span>
