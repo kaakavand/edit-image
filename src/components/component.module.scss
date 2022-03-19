@@ -1,0 +1,48 @@
+.input_box {
+    input {
+        display: none;
+    }
+
+    figure {
+        width: 400px;
+        height: 300px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px;
+
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+}
+h2 {
+    text-align: right;
+}
+
+
+.filter_box {
+    width: 400px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    .box {
+        width: 80px;
+        height: 80px;
+        border-radius: 3px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: red;
+        margin: 10px;
+    }
+}
+
+.setting_box {
+    display: flex;
+    div {
+        width: 200px;
+    }
+}
