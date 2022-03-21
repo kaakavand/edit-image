@@ -10,8 +10,8 @@
     }
 
     figure {
-        width: 370px;
-        height: 370px;
+        width: 484px;
+        height: 484px;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -51,13 +51,19 @@ h5 {
     background-color: red;
 }
 
+button.rotate {
+    svg {
+        transform: rotate(90deg) !important;
+    }
+}
+
 h2.imageAdd {
     background-color: #78909c;
     color: #fff;
     font-size: 18px;
     padding: 5px 10px;
     border-radius: 5px 5px 0 0;
-    width: 370px;
+    width: 484px;
 }
 h2.filter_h2 {
     background-color: #78909c;
@@ -105,12 +111,22 @@ h2.setting_h2 {
     margin-top: 30px;
     display: flex;
     align-items: center;
+
+    flex-direction: column;
     div {
-        width: 200px;
+        width: 100%;
     }
-    button {
-        height: 30px;
+    .fliper {
+        display: flex;
+        justify-content: space-between;
+
+        button {
+            background-color: #78909c;
+        }
     }
+}
+.css-53tbrc-MuiSlider-root {
+    color: #78909c !important;
 }
 
 @media only screen and (max-width: 930px) {
@@ -187,7 +203,8 @@ h2.setting_h2 {
         margin-top: 320px;
     }
 
-    .imageAdd , figure {
+    .imageAdd,
+    figure {
         width: 290px !important;
     }
 }

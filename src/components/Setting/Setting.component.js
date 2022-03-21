@@ -1,6 +1,9 @@
 import { Button, Slider } from "@mui/material";
 import React from "react";
 import style from "../component.module.scss";
+import FlipIcon from "@mui/icons-material/Flip";
+import Rotate90DegreesCcwIcon from "@mui/icons-material/Rotate90DegreesCcw";
+import Rotate90DegreesCwIcon from "@mui/icons-material/Rotate90DegreesCw";
 
 function Setting(props) {
     const changBrightness = (e) => {
@@ -12,7 +15,7 @@ function Setting(props) {
 
     return (
         <>
-        <h2 className={style.setting_h2}>تنظیمات</h2>
+            <h2 className={style.setting_h2}>تنظیمات</h2>
             <div className={style.setting_box}>
                 <div>
                     <span>
@@ -36,8 +39,20 @@ function Setting(props) {
                         />
                     </span>
                 </div>
-                <Button variant="contained">Contained</Button>
-                <Button variant="contained">Contained</Button>
+                <div className={style.fliper}> 
+                    <Button variant="contained" onClick={() => alert('coming soon 😎')}>
+                        <Rotate90DegreesCcwIcon />
+                    </Button>
+                    <Button variant="contained" onClick={() => alert('coming soon 😎')}>
+                        <Rotate90DegreesCwIcon />
+                    </Button>
+                    <Button variant="contained" onClick={() => alert('coming soon 😎')} className={style.rotate}>
+                        <FlipIcon />
+                    </Button>
+                    <Button variant="contained" onClick={() => alert('coming soon 😎')}>
+                        <FlipIcon />
+                    </Button>
+                </div>
             </div>
         </>
     );

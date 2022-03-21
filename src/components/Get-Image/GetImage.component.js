@@ -41,7 +41,10 @@ function GetImage(props) {
                             <img
                                 src={img}
                                 alt=""
-                                style={{ filter: imgFilter , transform: `rotate(${rotate * 1.8}deg)`}}
+                                style={{
+                                    filter: imgFilter,
+                                    transform: `rotate(${rotate * 1.8}deg)`,
+                                }}
                             />
                             <span
                                 className={style.remove}
@@ -59,7 +62,11 @@ function GetImage(props) {
                                 type="file"
                                 onChange={changeImage}
                             />
-                            <Button variant="contained" component="span" className={style.button_upload}>
+                            <Button
+                                variant="contained"
+                                component="span"
+                                className={style.button_upload}
+                            >
                                 آپلود تصویر
                             </Button>
                         </label>
